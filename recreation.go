@@ -225,7 +225,7 @@ func scan(table string, pageSize int, pageState []byte) ([]user, []byte, error) 
 	query := q(`SELECT first_name, last_name, age FROM users`)
 
 	if pageSize > 0 {
-		query.PageSize(10)
+		query.PageSize(pageSize)
 	}
 
 	if pageState != nil {
