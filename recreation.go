@@ -197,7 +197,7 @@ func getContainer(name string) (*docker.APIContainers, error) {
 
 func tearDown() error {
 	if dbConfig == (DBConfig{}) {
-		err := getConfig("CASSANDRA_13592", &dbConfig)
+		err := getConfig("CASSANDRA_13991", &dbConfig)
 		if err != nil {
 			return err
 		}
@@ -316,7 +316,7 @@ func performRecreation() error {
 func main() {
 	var err error
 
-	err = getConfig("CASSANDRA_13592", &dbConfig)
+	err = getConfig("CASSANDRA_13991", &dbConfig)
 	if err != nil {
 		fmt.Printf("Error getting config values: %v\n", err)
 		return
